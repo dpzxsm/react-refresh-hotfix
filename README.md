@@ -30,7 +30,7 @@ module.exports = {
   modules: {
     rules: [
       isDevelopment && {
-        test: /\.[m|c]?jsx?$/,
+        test: /\.[m|c]?[jt]sx?$/,
         exclude: /node_modules/,
         use: ['react-refresh-hotfix'],
       },
