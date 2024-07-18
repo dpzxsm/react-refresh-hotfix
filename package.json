@@ -1,0 +1,31 @@
+{
+  "name": "react-refresh-hotfix",
+  "description": "React is a JavaScript library for building user interfaces.",
+  "keywords": [
+    "react",
+    "react-refresh"
+  ],
+  "version": "1.0.0",
+  "bugs": "https://github.com/dpzxsm/react-refresh-hotfix/issues",
+  "license": "MIT",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "react-alias.js"
+  ],
+  "main": "hotfix-loader.js",
+  "exports": {
+    ".": {
+      "react-alias": "./react-alias",
+      "default": "./index.js"
+    },
+    "./react-alias": "./react-alias"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.13.0"
+  }
+}
