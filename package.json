@@ -12,15 +12,15 @@
     "LICENSE",
     "README.md",
     "index.js",
-    "react-alias.js"
+    "react.js"
   ],
   "main": "hotfix-loader.js",
   "exports": {
     ".": {
-      "react-alias": "./react-alias",
+      "react": "./react.js",
       "default": "./index.js"
     },
-    "./react-alias": "./react-alias"
+    "./react": "./react.js"
   },
   "engines": {
     "node": ">=0.10.0"
