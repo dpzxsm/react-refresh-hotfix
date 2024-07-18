@@ -1,4 +1,4 @@
-const React= require("./react/cjs/react.development")
+const React= require("../react/cjs/react.development")
 
 const HOT_EVENT = {
   listeners: [],
