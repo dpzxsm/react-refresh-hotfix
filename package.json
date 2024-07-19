@@ -13,6 +13,7 @@
     "LICENSE",
     "README.md",
     "index.js",
+    "loader.js",
     "react.js"
   ],
   "main": "hotfix-loader.js",
