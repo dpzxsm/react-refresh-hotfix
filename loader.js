@@ -5,5 +5,5 @@ module.exports = function (source) {
     const functionName = `Anonymous$default`
     source = source.replace(match[0], `const ${functionName} = ${match[1]}\nexport default ${functionName}`);
   }
-  return `${source}\nif(module.hot){module.hot.dispose(function(){ window.HOT_EVENT.emit()})}\n`;
+  return source;
 };
