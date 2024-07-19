@@ -1,11 +1,11 @@
 {
   "name": "react-refresh-hotfix",
-  "description": "React is a JavaScript library for building user interfaces.",
+  "description": "react-refresh-hotfix is react-refresh-webpack-plugin's additional feature support",
   "keywords": [
     "react",
     "react-refresh"
   ],
-  "version": "1.0.2",
+  "version": "1.0.3",
   "homepage": "https://github.com/dpzxsm/react-refresh-hotfix",
   "bugs": "https://github.com/dpzxsm/react-refresh-hotfix/issues",
   "license": "MIT",
@@ -35,5 +35,8 @@
   },
   "peerDependencies": {
     "react": ">=16.13.0"
+  },
+  "devDependencies": {
+    "enhanced-resolve": "^5.17.0"
   }
 }

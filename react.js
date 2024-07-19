@@ -19,11 +19,16 @@ HOT_EVENT.emit = () => {
 window.HOT_EVENT = HOT_EVENT;
 
 function useEffect(effect, deps) {
+  const effectRef = React.useRef(effect);
   const disableRef = React.useRef(false);
+  const [state, setState] = React.useState(() => Math.random());
+
+  effectRef.current = effect;
 
   React.useEffect(() => {
     const event = () => {
       disableRef.current = true;
+      setState(Math.random());
     };
     HOT_EVENT.on(event);
     return () => {
@@ -37,8 +42,12 @@ function useEffect(effect, deps) {
       disableRef.current = false;
       return;
     }
-    return effect();
+    return effectRef.current();
   }, deps);
+
+  React.useEffect(() => {
+    disableRef.current = false;
+  }, [state])
 }
 
 module.exports = {
