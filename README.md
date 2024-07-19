@@ -20,6 +20,18 @@ First, follow the official guide [react-refresh-webpack-plugin](https://github.c
 Then, add the following to your webpack config:
 
 ```js
+const  refreshFixPlugin = require("react-refresh-hotfix");
+const isDevelopment = process.env.NODE_ENV === "development";
+module.exports = {
+  plugins: [
+    isDevelopment && new refreshFixPlugin(),
+  ].filter(Boolean)
+}
+```
+
+Or, you can use the following configuration to avoid the need to modify the webpack config:
+
+```js
 
 const isDevelopment = process.env.NODE_ENV === "development";
 
@@ -32,7 +44,7 @@ module.exports = {
       isDevelopment && {
         test: /\.[m|c]?[jt]sx?$/,
         exclude: /node_modules/,
-        use: ['react-refresh-hotfix'],
+        use: ['react-refresh-hotfix/loader'],
       },
     ].filter(Boolean)
   }

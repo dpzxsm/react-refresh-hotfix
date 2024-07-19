@@ -5,7 +5,7 @@
     "react",
     "react-refresh"
   ],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/dpzxsm/react-refresh-hotfix",
   "bugs": "https://github.com/dpzxsm/react-refresh-hotfix/issues",
   "license": "MIT",
@@ -18,9 +18,11 @@
   "main": "hotfix-loader.js",
   "exports": {
     ".": {
+      "loader": "./loader.js",
       "react": "./react.js",
       "default": "./index.js"
     },
+    "./loader": "./loader.js",
     "./react": "./react.js"
   },
   "repository": {
